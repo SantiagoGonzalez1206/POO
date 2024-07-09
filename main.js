@@ -55,12 +55,22 @@ class Perro extends Animal{
         this.raza = raza
     }
     moverCola(){
-        console.log(`El perro esta moviendo la cola`);
+        console.log(`El perro ${perro1.nombre} esta moviendo la cola`);
     }
 }
 
 const perro1 = new Perro ("pepe", 10, "puddle")
 perro1.hacerSonido()
 perro1.moverCola()
+
+class Figura {
+    constructor(color, area){
+        this.color = color
+        this.area = area
+    }
+    calcularArea(){
+        console.log(`el area de la figura es ${figura1.area}`);
+    }
+}
 
 
