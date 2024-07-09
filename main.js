@@ -8,9 +8,19 @@ class Persona {
     saludar(){
         console.log(`Hola ${this.nombre}`);
     }
+    static esMayorDeEdad(edad){
+        if(edad>17){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
-const persona1= new Persona ("santi", 23, "femenino")
+const persona1= new Persona ("santi", 20, "femenino")
 persona1.saludar()
+
+const esMayor= Persona.esMayorDeEdad(persona1.edad)
+console.log(`La persona es mayor? ${esMayor}`);
 
 class Estudiante extends Persona{
     constructor(nombre, edad, sexo, carrera){
@@ -25,3 +35,5 @@ class Estudiante extends Persona{
 const estudiante1= new Estudiante ("Nicolle zarai", 23, "femenino", "Torrentismo")
 estudiante1.saludar()
 estudiante1.estudiar()
+
+
