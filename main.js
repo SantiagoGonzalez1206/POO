@@ -37,3 +37,30 @@ estudiante1.saludar()
 estudiante1.estudiar()
 
 
+class Animal {
+    constructor(nombre, edad){
+        this.nombre = nombre
+        this.edad = edad
+    }
+    hacerSonido(){
+        console.log(`muuu`);
+    }
+}
+
+
+
+class Perro extends Animal{
+    constructor(nombre, edad, raza){
+        super (nombre, edad)
+        this.raza = raza
+    }
+    moverCola(){
+        console.log(`El perro esta moviendo la cola`);
+    }
+}
+
+const perro1 = new Perro ("pepe", 10, "puddle")
+perro1.hacerSonido()
+perro1.moverCola()
+
+
